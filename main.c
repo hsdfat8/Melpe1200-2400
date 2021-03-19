@@ -53,7 +53,7 @@
 #endif
 
 #include "melpe/melpe.h"   //low-level alsa/wave audio
-static numfr;
+static char numfr;
 static short spin[748]; 
 static short spout[748]; 
 int main(int argc, char *argv[])

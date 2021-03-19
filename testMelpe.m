@@ -5,7 +5,7 @@ for idx = 1
     dataInWavPath = [sample '.wav'];
     dataOutWavPath = [sample 'melp.wav'];
     dataIn = readBin(dataInPath,'short');
-    dataOut = readBin(dataOutPath,'short');
+    dataOut = readBin('1.meple','short');
     pesqEXE = 'C:\Project\voice-compress\BKIC-pairphone\EXE\';
     audiowrite(dataInWavPath,dataIn/2^15,8e3);
     audiowrite(dataOutWavPath,dataOut/2^15,8e3);
