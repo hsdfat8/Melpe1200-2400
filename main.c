@@ -87,8 +87,6 @@ int main(int argc, char *argv[])
           return 0;
       }
       melpe_a(buf,spin);
-      buf[9]&=0xFE;
-      printf("buf0 = %x     buf1 = %x\n",buf[0],buf[1]);
       melpe_s(spout,buf);
       
       fwrite(spout, sizeof(short), 540, fout);  
