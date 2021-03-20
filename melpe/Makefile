@@ -13,14 +13,10 @@ LSRC = $(LOBJECTS:.o=.c)
 LIBS = -lm
 
 libmelpe.a: $(LOBJECTS)
-
 	ar cr libmelpe.a $(LOBJECTS)
-	-if test -s /bin/ranlib; then /bin/ranlib libmelpe.a; \
-      else if test -s /usr/bin/ranlib; then /usr/bin/ranlib libmelpe.a; \
-	else exit 0; fi; fi
-
+	ranlib libmelpe.a
 clean:
-	rm -f $(PROGRAM) $(LOBJECTS) $(ARCH) core *.bak *.a
+	del -f $(PROGRAM) $(LOBJECTS) $(ARCH) core *.bak *.a *.o
 
 depend:
 	makedepend -- $(CFLAGS) -- $(LSRC)
